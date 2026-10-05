@@ -2,18 +2,43 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/space-grotesk.woff2') format('woff2');
+    font-weight: 300 700;
+    font-display: swap;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+/* Matches chamberlainweb (~/Projects/chamberlainweb/src/styles/global.css) */
 @layer base {
     body {
-        @apply bg-theme-light;
+        @apply bg-white text-theme-dark;
+        font-size: 17px;
+        line-height: 1.6;
     }
     h1, h2, h3, h4, h5, h6 {
-        @apply text-theme-dark;
+        @apply font-head text-theme-dark;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
     }
+    h1 { font-size: clamp(2rem, 6.5vw, 4.6rem); font-weight: 700; }
+    h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 700; }
+    h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
     p {
         @apply text-theme-secondary;
     }
+    :focus-visible { outline: 3px solid #b80c09; outline-offset: 3px; }
+    [id] { scroll-margin-top: 140px; }
+}
+
+@layer components {
+    .container { width: 100%; max-width: 1120px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+    .section-pad { padding-top: clamp(64px, 10vw, 120px); padding-bottom: clamp(64px, 10vw, 120px); }
+    .card { @apply rounded-card border border-theme-line bg-white p-[30px]; }
+    .btn { @apply inline-flex items-center gap-[10px] rounded-full border-2 border-transparent px-[26px] py-[18px] font-head text-[1.05rem] font-semibold leading-none no-underline transition-[background-color,transform] duration-150; }
+    .btn-primary { @apply bg-theme-accent text-white hover:-translate-y-px hover:bg-theme-accent-hover; }
 }

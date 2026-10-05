@@ -2,11 +2,11 @@
     import { language } from '$lib/stores/language.js';
     import { translations } from '$lib/i18n/translations.js';
 </script>
-<section id="contact" class="bg-theme-gray py-16 md:py-32">
-	<div class="container mx-auto px-6 md:px-12 lg:px-16">		
+<section id="contact" class="bg-theme-light section-pad">
+	<div class="container">		
 		<div class="grid grid-cols-1 gap-10 sm:grid-cols-2 justify-center">
 			<div>
-				<h2 class="text-3xl font-bold md:text-4xl mb-4">
+				<h2 class="mb-4">
 					{translations[$language].contact.title}
 				</h2>
 				<p class=" text-lg leading-relaxed md:text-xl">
@@ -15,7 +15,7 @@
 			</div>
 			<div class="w-full sm:w-fit mx-auto">
 				<div>
-					<h3 class="text-3xl font-bold md:text-4xl mb-4">
+					<h3 class="mb-4 text-2xl">
 						{translations[$language].contact.subtitle}
 					</h3>
 					<ul class="space-y-4">

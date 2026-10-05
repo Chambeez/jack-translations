@@ -4,9 +4,9 @@
 	import { translations } from '$lib/i18n/translations';
 </script>
 
-<section id="about" class="bg-theme-light py-16 md:py-32">
-	<div class="container mx-auto px-6 md:px-12 lg:px-16">
-		<h2 class="text-center text-3xl font-bold md:text-4xl">
+<section id="about" class="bg-white section-pad">
+	<div class="container">
+		<h2 class="text-center">
 			{translations[$language].about.title}
         </h2>
 		<div class="mt-6 items-center gap-8 grid grid-cols-3 mb-16">
@@ -23,7 +23,7 @@
 		</div>
 		<div class="grid items-start gap-12 md:grid-cols-2">
 			<div class="flex flex-col">
-				<h3 class="mb-4 text-2xl font-semibold">
+				<h3 class="mb-4">
 					{translations[$language].about.title2}                    
                 </h3>
 				<ul class="space-y-4">
@@ -42,7 +42,7 @@
                 </ul>
 			</div>
 			<div class="flex flex-col">
-				<h3 class="mb-4 text-2xl font-semibold ">
+				<h3 class="mb-4">
 					{translations[$language].about.title3}
 				</h3>
 				<p class="leading-relaxed ">

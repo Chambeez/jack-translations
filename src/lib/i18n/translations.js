@@ -129,7 +129,8 @@ export const translations = {
             }
         },
         footer: {
-            terms: "Terms & Conditions"
+            terms: "Terms & Conditions",
+            tagline: "German to English translation"
         } 
     },
     de: {    
@@ -262,7 +263,8 @@ export const translations = {
             }
         },
         footer: {
-            terms: "Allgemeine Geschäftsbedingungen"
+            terms: "Allgemeine Geschäftsbedingungen",
+            tagline: "Übersetzungen Deutsch–Englisch"
         } 
     }
 };

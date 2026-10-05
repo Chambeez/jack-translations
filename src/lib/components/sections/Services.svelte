@@ -14,16 +14,16 @@
     ];
 </script>
 
-<section id="services" class="bg-theme-gray py-16 md:py-32">
-    <div class="container mx-auto px-6 md:px-12 lg:px-16">
-        <h2 class="text-center text-3xl font-bold md:text-4xl">
+<section id="services" class="bg-theme-light section-pad">
+    <div class="container">
+        <h2 class="text-center">
             {t.title}
         </h2>
         <p class="text-theme-secondary mt-4 text-center text-lg w-full lg:w-[920px] mx-auto">
             {t.subtitle}
         </p>
         <div class="mx-auto my-8 h-1 w-24 bg-theme-accent"></div>
-        <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {#each services as service}
                 <ServiceCard title={service.title} description={service.description}/>
             {/each}
