@@ -4,7 +4,7 @@
     import { translations } from '$lib/i18n/translations';	
 </script>
 
-<section class="bg-white -mt-20 flex h-full pt-64 pb-16 md:pb-32 md:min-h-screen items-center">
+<section class="bg-white pt-[clamp(72px,12vw,150px)] pb-[clamp(64px,9vw,110px)]">
 	
 	<div class="container text-center">
 		<h1 class="mx-auto max-w-[16em]">

@@ -9,13 +9,17 @@
         %sveltekit.head%
         <title>%meta.title%</title>
         <meta name="description" content="%meta.description%" />
-        <meta name="keywords" content="German to English translation, professional translation services, German translator, English translator, business translation, academic translation, marketing translation" />
         <meta name="author" content="Jack Chamberlain" />
-   
+        <link rel="canonical" href="%meta.url%" />
+        <link rel="alternate" hreflang="de" href="%meta.urlDe%" />
+        <link rel="alternate" hreflang="en" href="%meta.urlEn%" />
+        <link rel="alternate" hreflang="x-default" href="%meta.urlDe%" />
+
         <meta property="og:title" content="%meta.ogTitle%" />
         <meta property="og:description" content="%meta.ogDescription%" />
         <meta property="og:image" content="" />
-        <meta property="og:url" content="https://chamberlainuebersetzung.com" />
+        <meta property="og:url" content="%meta.url%" />
+        <meta property="og:locale" content="%meta.ogLocale%" />
         <meta property="og:type" content="website" />
         <script defer src="https://www.googletagmanager.com/gtag/js?id=G-3NPEM8KRCL"></script>
         <script>

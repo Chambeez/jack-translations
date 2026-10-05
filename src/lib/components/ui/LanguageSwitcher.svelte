@@ -2,8 +2,8 @@
 	import { language } from '$lib/stores/language';
 
 	const languages = [
-		{ code: 'en', label: 'English' },
-		{ code: 'de', label: 'Deutsch' }
+		{ code: 'en', label: 'EN', name: 'English' },
+		{ code: 'de', label: 'DE', name: 'Deutsch' }
 	];
 
 	function switchLanguage(langCode) {
@@ -12,13 +12,16 @@
 	}
 </script>
 
-<div class="flex space-x-2 w-fit absolute md:sticky top-32 left-0 right-0 md:mx-0 mx-auto md:left-3 z-40 ">
-	{#each languages as { code, label }}
+<div class="flex rounded-full border border-[#4a5862] p-0.5 font-head text-[0.85rem] font-semibold">
+	{#each languages as { code, label, name }}
 		<button
-			class="rounded-full px-4 py-2 font-head text-[0.95rem] font-medium transition-colors ease-in-out duration-300 {$language ===
-			code
-				? 'bg-theme-dark text-theme-light hover:bg-theme-accent'
-				: 'bg-white hover:border-theme-dark border border-theme-line'}"
+			type="button"
+			lang={code}
+			aria-label={name}
+			aria-pressed={$language === code}
+			class="rounded-full px-2.5 py-1 leading-none transition-colors duration-150 {$language === code
+				? 'bg-white text-theme-dark'
+				: 'text-white hover:text-theme-accent-on-dark'}"
 			on:click={() => switchLanguage(code)}
 		>
 			{label}

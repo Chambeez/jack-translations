@@ -3,22 +3,17 @@
 	import Nav from '$lib/components/nav/Nav.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import { language } from '$lib/stores/language';
-	import { onMount } from 'svelte';	
-    import LanguageSwitcher from '$lib/components/ui/LanguageSwitcher.svelte';
 
-	onMount(() => {
-		const hostname = window.location.hostname;
-		if (hostname.includes('chamberlainuebersetzung.com')) {
-			language.set('de');
-		} else if (hostname.includes('chamberlaintranslation.com')) {
-			language.set('en');
-		}
-	});
+	export let data;
+
+	// The server picks the language from the domain (hooks.server.js), so the
+	// first HTML is already in the right language. The DE/EN switch in the nav
+	// changes it afterwards in the browser.
+	language.set(data.lang);
 </script>
 
 <div class="flex min-h-screen flex-col">
 	<Nav />
-	<LanguageSwitcher />
 	<main class="flex-grow">
 		<slot />
 	</main>
