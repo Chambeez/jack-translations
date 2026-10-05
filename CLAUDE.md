@@ -9,9 +9,11 @@ Jack is not a trained developer: explain every step in plain language, do the te
 
 ## Stack
 - SvelteKit 2, Svelte 5, Tailwind 3, Vite 5. Adapter: @sveltejs/adapter-cloudflare. Node 22 (.nvmrc).
-- Language is chosen per hostname in `src/hooks.server.js` (chamberlainuebersetzung.com = de, else en). Texts in `src/lib/i18n/translations.js`. The language switcher is client-side (`src/lib/stores/language.js`).
-- Pages: `src/routes/+page.svelte` (sections in `src/lib/components/sections/`), `src/routes/policy/`.
-- Google Analytics G-3NPEM8KRCL in `src/app.html` (property probably still in Tom's account; ask Tom for admin access).
+- Language is chosen per hostname on the server (`src/hooks.server.js` -> `+layout.server.js` -> store), so the first HTML is already in the right language. Locally: `?lang=de`. Texts in `src/lib/i18n/translations.js`. DE/EN switch in the header changes it client-side.
+- Contact details, WhatsApp, Formspree endpoint, Impressum details, sitemap pages: `src/lib/site.js`. Testimonials (real quotes only): `src/lib/testimonials.js`.
+- Styles copied from ~/Projects/chamberlainweb (Space Grotesk, .btn, .card, .container, .section-pad in `src/app.css`).
+- Pages: `src/routes/+page.svelte` (sections in `src/lib/components/sections/`), `/policy` (terms), `/impressum`, `/datenschutz`. Per-domain `/robots.txt`, `/sitemap.xml`, `/llms.txt` are server routes.
+- Analytics: Google Analytics removed 5 Oct 2026 (no consent). Use Cloudflare Web Analytics (Pages project -> Metrics), no cookies.
 
 ## Deploy
 - GitHub: Chambeez/jack-translations, branch `master`. Push = live (Cloudflare Pages project "jack-translations", build `npm run build`, output `.svelte-kit/cloudflare`).
@@ -26,6 +28,15 @@ Jack is not a trained developer: explain every step in plain language, do the te
 ## History
 - Built by Tom (Decisive Development), handed over 5 Oct 2026 (repo, domains). Moved from Netlify to Cloudflare the same day. Tom deletes the Netlify site once Jack confirms.
 
+## Open
+- Impressum details missing (LEGAL in src/lib/site.js): address, business type, UID, authority, chamber.
+- Cloudflare: remove the redirect rule on chamberlaintranslation.com, add chamberlaintranslation.com + www as custom domains on the Pages project (needs Jack's OK). Turn on Web Analytics. Check "Managed robots.txt".
+- Formspree endpoint not set: quote form opens the visitor's email app until FORM_ENDPOINT is filled in.
+- Testimonial from Wilder Kaiser contact.
+
 ## Ideas (not started)
-- Serve English on chamberlaintranslation.com instead of redirecting (hooks.server.js already supports it).
-- og:image is empty in app.html; author meta says "Decisive Development".
+- One page per service (Marketing/website, Tourism, Academic, Technical). Tourism is the strongest niche.
+
+## Decisions
+- 2026-10-05: No prices on the site. Main call to action: free quote (send your text, get price and deadline).
+- 2026-10-05: Quote reply promise: within one working day. WhatsApp +43 677 6343 52 16 confirmed. Wilder Kaiser may be named. GA replaced by Cloudflare Web Analytics.
