@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Nav from '$lib/components/nav/Nav.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
+	import WhatsAppButton from '$lib/components/ui/WhatsAppButton.svelte';
 	import { language } from '$lib/stores/language';
 
 	export let data;
@@ -18,4 +19,5 @@
 		<slot />
 	</main>
 	<Footer />
+	<WhatsAppButton />
 </div>

@@ -11,8 +11,8 @@ export const translations = {
             name: "Jack Chamberlain Translation Services",
             tagline: "Professional German-to-English Translation Services for Businesses, Publications, and More.",
             description: "Are you looking to connect with English-speaking audiences? I specialise in delivering precise and engaging German-to-English translations for businesses, creatives, and academics. From technical manuals to creative publications, I deliver translations that are accurate and engaging.",
-            callToAction: "Discover how I can bring your words to life in English.",
-            buttonText: "Contact Me"
+            callToAction: "Send me your text and you get a price and deadline within one working day. Free and without obligation.",
+            buttonText: "Send your text – free quote"
         },
         services: {
             title: "What I Offer",
@@ -47,7 +47,8 @@ export const translations = {
             home: "Home",
             services: "Services", 
             about: "About",
-            contact: "Contact"
+            contact: "Contact",
+            cta: "Free quote"
         },
         about: {
             title: "About Me",
@@ -64,11 +65,50 @@ export const translations = {
             end: "Let me help you break language barriers and reach a broader audience with impactful, high-quality translations."
         },
         contact: {
-            title: "Get In Touch",
-            copy: "Ready to bring your German content to life in English? I'd love to hear from you! Whether you’re ready to start a project or just have a question, feel free to reach out.",
+            title: "Send your text – free quote",
+            copy: "Tell me what you need translated and send the text or a sample. You get a price and a delivery date within one working day, free and without obligation.",
             subtitle: "Contact Details",
+            email: "Email",
+            whatsapp: "WhatsApp",
             location: "Location",
-            business: "Business Hours: Monday to Friday, 9 AM to 6 PM (CET)"
+            business: "Business hours: Monday to Friday, 9 AM to 6 PM (CET)"
+        },
+        how: {
+            eyebrow: "How it works",
+            title: "From your German text to finished English in three steps",
+            steps: [
+                { title: "Send your text", text: "Send the text, or a sample if it is long, using the form below, email or WhatsApp." },
+                { title: "Get a price and deadline", text: "Within one working day you get a price and a delivery date. Free and without obligation." },
+                { title: "Receive your translation", text: "I translate, check every line myself and deliver by the agreed date. One round of revisions is included." }
+            ],
+            price: "The price depends on the length, the type of text and how soon you need it."
+        },
+        quote: {
+            name: "Name",
+            email: "Email",
+            type: "Type of text",
+            types: ["Website or marketing", "Tourism", "Academic", "Technical", "Book or creative text", "Other"],
+            choose: "Please choose",
+            direction: "Language",
+            directionValue: "German → English",
+            deadline: "When do you need it?",
+            deadlinePlaceholder: "e.g. by 20 October",
+            link: "Link to your file (optional)",
+            linkPlaceholder: "Google Drive, Dropbox, WeTransfer …",
+            message: "Message",
+            messagePlaceholder: "What is the text about, and roughly how long is it?",
+            submit: "Send your text – free quote",
+            hintMail: "Your email app opens with everything filled in. Attach your file there and press send.",
+            hintForm: "I reply by email. You can attach your file to that reply.",
+            sending: "Sending …",
+            success: "Thank you! I will get back to you within one working day.",
+            error: "Sorry, that did not work. Please email me directly:",
+            mailSubject: "Translation quote request",
+            opened: "Your email app should now be open. If not, email me directly:"
+        },
+        whatsapp: {
+            label: "Message me on WhatsApp",
+            text: "Hi Jack, I have a text to translate:"
         },
         terms: {
             title: "Terms and Conditions",
@@ -145,8 +185,8 @@ export const translations = {
             name: "Jack Chamberlain Übersetzungsdienste",
             tagline: "Professionelle Übersetzungen vom Deutschen ins Englische für Unternehmen, Publikationen und mehr.",
             description: "Möchten Sie englischsprachige Zielgruppen erreichen? Ich bin auf präzise und ansprechende Übersetzungen vom Deutschen ins Englische spezialisiert - für Unternehmen, Kreative und Wissenschaftler. Von technischen Handbüchern bis hin zu kreativen Publikationen liefere ich Übersetzungen, die sowohl genau als auch fesselnd sind.",
-            callToAction: "Entdecken Sie, wie ich Ihre Worte im Englischen zum Leben erwecken kann.",
-            buttonText: "Kontaktieren Sie mich"
+            callToAction: "Schicken Sie mir Ihren Text: Sie erhalten innerhalb eines Werktags Preis und Liefertermin. Kostenlos und unverbindlich.",
+            buttonText: "Text senden – kostenloses Angebot"
         },
         services: {
             title: "Mein Angebot",
@@ -181,7 +221,8 @@ export const translations = {
             home: "Startseite",
             services: "Leistungen",
             about: "Über mich",
-            contact: "Kontakt"
+            contact: "Kontakt",
+            cta: "Kostenloses Angebot"
         },     
         about: {
             title: "Über mich",
@@ -198,11 +239,50 @@ export const translations = {
             end: "Lassen Sie mich Ihnen helfen, Sprachbarrieren zu überwinden und ein breiteres Publikum mit wirkungsvollen, hochwertigen Übersetzungen zu erreichen."
         },
         contact: {
-            title: "Kontaktieren Sie mich",
-            copy: "Möchten Sie Ihre deutschen Inhalte ins Englische zum Leben erwecken? Ich freue mich, von Ihnen zu hören! Egal, ob Sie ein Projekt starten oder einfach nur eine Frage haben - ich bin für Sie da.",
+            title: "Text senden – kostenloses Angebot",
+            copy: "Sagen Sie mir, was übersetzt werden soll, und schicken Sie den Text oder einen Auszug. Sie erhalten innerhalb eines Werktags Preis und Liefertermin, kostenlos und unverbindlich.",
             subtitle: "Kontaktinformationen",
+            email: "E-Mail",
+            whatsapp: "WhatsApp",
             location: "Standort",
-            business: "Geschäftszeiten:** Montag bis Freitag, 9:00 bis 18:00 Uhr (MEZ)"
+            business: "Geschäftszeiten: Montag bis Freitag, 9:00 bis 18:00 Uhr (MEZ)"
+        },
+        how: {
+            eyebrow: "So funktioniert's",
+            title: "In drei Schritten von Ihrem deutschen Text zur fertigen englischen Fassung",
+            steps: [
+                { title: "Text senden", text: "Schicken Sie mir den Text oder bei längeren Texten einen Auszug, über das Formular unten, per E-Mail oder WhatsApp." },
+                { title: "Preis und Termin erhalten", text: "Innerhalb eines Werktags erhalten Sie einen Preis und einen Liefertermin. Kostenlos und unverbindlich." },
+                { title: "Übersetzung erhalten", text: "Ich übersetze, prüfe jede Zeile selbst und liefere zum vereinbarten Termin. Eine Korrekturrunde ist inklusive." }
+            ],
+            price: "Der Preis hängt von der Länge, der Art des Textes und dem gewünschten Termin ab."
+        },
+        quote: {
+            name: "Name",
+            email: "E-Mail",
+            type: "Art des Textes",
+            types: ["Website oder Marketing", "Tourismus", "Wissenschaft", "Technik", "Buch oder kreativer Text", "Sonstiges"],
+            choose: "Bitte wählen",
+            direction: "Sprache",
+            directionValue: "Deutsch → Englisch",
+            deadline: "Bis wann brauchen Sie die Übersetzung?",
+            deadlinePlaceholder: "z. B. bis 20. Oktober",
+            link: "Link zu Ihrer Datei (optional)",
+            linkPlaceholder: "Google Drive, Dropbox, WeTransfer …",
+            message: "Nachricht",
+            messagePlaceholder: "Worum geht es im Text, und wie lang ist er ungefähr?",
+            submit: "Text senden – kostenloses Angebot",
+            hintMail: "Ihr E-Mail-Programm öffnet sich mit allen Angaben. Hängen Sie dort Ihre Datei an und klicken Sie auf Senden.",
+            hintForm: "Ich antworte per E-Mail. Ihre Datei können Sie an die Antwort anhängen.",
+            sending: "Wird gesendet …",
+            success: "Vielen Dank! Ich melde mich innerhalb eines Werktags.",
+            error: "Das hat leider nicht geklappt. Bitte schreiben Sie mir direkt:",
+            mailSubject: "Anfrage Übersetzung",
+            opened: "Ihr E-Mail-Programm sollte sich jetzt geöffnet haben. Falls nicht, schreiben Sie mir direkt:"
+        },
+        whatsapp: {
+            label: "Schreiben Sie mir auf WhatsApp",
+            text: "Hallo Jack, ich habe einen Text zum Übersetzen:"
         },
         terms: {
             title: "Allgemeine Geschäftsbedingungen",

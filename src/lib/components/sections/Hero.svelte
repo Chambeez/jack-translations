@@ -22,7 +22,7 @@
         </p>
 		<div class="mt-8">
 			<Button 
-                href="#contact" 
+                href="#quote" 
                 text={translations[$language].hero.buttonText}
             />
 		</div>

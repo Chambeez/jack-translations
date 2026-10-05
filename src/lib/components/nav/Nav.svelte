@@ -22,6 +22,7 @@
 			<a class="hover:text-theme-accent-on-dark" href="/#about">{t.about}</a>
 			<a class="hover:text-theme-accent-on-dark" href="/#contact">{t.contact}</a>
 			<LanguageSwitcher />
+			<a class="btn btn-primary hidden !px-[18px] !py-3 !text-[0.95rem] hover:!text-white lg:inline-flex" href="/#quote">{t.cta}</a>
 		</div>
 	</nav>
 </header>

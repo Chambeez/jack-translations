@@ -1,122 +1,37 @@
 <script>
-    import { language } from '$lib/stores/language.js';
-    import { translations } from '$lib/i18n/translations.js';
+	import { language } from '$lib/stores/language.js';
+	import { translations } from '$lib/i18n/translations.js';
+	import { EMAIL, WHATSAPP, WHATSAPP_DISPLAY } from '$lib/site';
+	import QuoteForm from '$lib/components/ui/QuoteForm.svelte';
+
+	$: t = translations[$language].contact;
+	$: wa = translations[$language].whatsapp;
 </script>
-<section id="contact" class="bg-theme-light section-pad">
-	<div class="container">		
-		<div class="grid grid-cols-1 gap-10 sm:grid-cols-2 justify-center">
-			<div>
-				<h2 class="mb-4">
-					{translations[$language].contact.title}
-				</h2>
-				<p class=" text-lg leading-relaxed md:text-xl">
-					{translations[$language].contact.copy} 
-				</p>
-			</div>
-			<div class="w-full sm:w-fit mx-auto">
-				<div>
-					<h3 class="mb-4 text-2xl">
-						{translations[$language].contact.subtitle}
-					</h3>
-					<ul class="space-y-4">
-						<li class="flex items-center">
-							<svg
-								class="mr-3 h-5 w-5 text-theme-accent"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4 6h16M4 12h16M4 18h16"
-								></path>
-							</svg>
-							<span>
-								Email: 
-								<a href="mailto:info@jackchamberlaintranslation.com" class="text-theme-accent">info@jackchamberlaintranslation.com</a>
-							</span>
-						</li>
-						<li class="flex items-center">
-							<svg
-								class="mr-3 h-5 w-5 text-theme-accent"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 3v18m9-9H3"
-								></path>
-							</svg>
-							<span>{translations[$language].contact.location}: Söll, Tirol</span>
-						</li>
-						<li class="flex items-center">
-							<svg
-								class="mr-3 h-5 w-5 text-theme-accent"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4 6h16M4 12h16M4 18h16"
-								></path>
-							</svg>
-							<span>{translations[$language].contact.business}</span>
-						</li>
-					</ul>
-				</div>
-			</div>
+
+<section id="contact" class="section-pad bg-theme-primary text-white">
+	<div class="container grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+		<div>
+			<h2 class="text-white">{t.title}</h2>
+			<p class="text-[1.12rem] text-theme-muted">{t.copy}</p>
+			<ul class="mt-8 space-y-4 text-white">
+				<li class="flex items-start gap-3">
+					<svg class="mt-1 h-5 w-5 flex-shrink-0 text-theme-accent-on-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+					<span>{t.email}: <a href="mailto:{EMAIL}" class="font-semibold underline-offset-4 hover:underline">{EMAIL.split('@')[0]}@<wbr />{EMAIL.split('@')[1]}</a></span>
+				</li>
+				<li class="flex items-start gap-3">
+					<svg class="mt-1 h-5 w-5 flex-shrink-0 text-theme-accent-on-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
+					<span>{t.whatsapp}: <a href="https://wa.me/{WHATSAPP}?text={encodeURIComponent(wa.text)}" target="_blank" rel="noopener" class="font-semibold underline-offset-4 hover:underline">{WHATSAPP_DISPLAY}</a></span>
+				</li>
+				<li class="flex items-start gap-3">
+					<svg class="mt-1 h-5 w-5 flex-shrink-0 text-theme-accent-on-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+					<span>{t.location}: Söll, Tirol</span>
+				</li>
+				<li class="flex items-start gap-3">
+					<svg class="mt-1 h-5 w-5 flex-shrink-0 text-theme-accent-on-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+					<span>{t.business}</span>
+				</li>
+			</ul>
 		</div>
+		<QuoteForm />
 	</div>
 </section>
-<!-- <div class="w-full sm:w-fit mx-auto">
-	<h3 class="mb-4 text-2xl font-semibold ">
-		Connect with Me
-	</h3>
-	<ul class="space-y-4 ">
-		<li class="flex items-center">
-			<svg
-				class="mr-3 h-5 w-5 text-theme-accent"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM10 12l4 4m0 0l4-4m-4 4V4"
-				></path>
-			</svg>
-			<a href="https://www.linkedin.com" class="text-theme-accent">LinkedIn Profile</a>
-		</li>
-		<li class="flex items-center">
-			<svg
-				class="mr-3 h-5 w-5 text-theme-accent"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M12 3v18m9-9H3"
-				></path>
-			</svg>
-			<span><a href="https://twitter.com" class="text-theme-accent">Twitter</a></span>
-		</li>
-	</ul>
-</div> -->

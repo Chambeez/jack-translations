@@ -41,5 +41,9 @@ html {
     .section-pad { padding-top: clamp(64px, 10vw, 120px); padding-bottom: clamp(64px, 10vw, 120px); }
     .card { @apply rounded-card border border-theme-line bg-white p-[30px]; }
     .btn { @apply inline-flex items-center gap-[10px] rounded-full border-2 border-transparent px-[26px] py-[18px] font-head text-[1.05rem] font-semibold leading-none no-underline transition-[background-color,transform] duration-150; }
+    .eyebrow { @apply mb-[14px] font-head text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-theme-accent; }
+    .field { @apply grid gap-1.5 font-head text-[0.95rem] font-medium; }
+    .field input, .field select, .field textarea { @apply w-full rounded-[10px] border-[1.5px] border-theme-line bg-white px-4 py-[14px] font-sans text-base text-theme-dark focus:border-theme-accent focus:outline-none; }
+    .field textarea { @apply min-h-[120px] resize-y; }
     .btn-primary { @apply bg-theme-accent text-white hover:-translate-y-px hover:bg-theme-accent-hover; }
 }
