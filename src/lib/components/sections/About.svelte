@@ -4,7 +4,7 @@
 	import { translations } from '$lib/i18n/translations';
 </script>
 
-<section id="about" class="bg-theme-light section-pad">
+<section id="about" class="bg-white section-pad">
 	<div class="container">
 		<h2 class="text-center">
 			{translations[$language].about.title}

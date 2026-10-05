@@ -73,6 +73,17 @@ export const translations = {
             location: "Location",
             business: "Business hours: Monday to Friday, 9 AM to 6 PM (CET)"
         },
+        work: {
+            eyebrow: "Selected work",
+            title: "Recent project",
+            tag: "Tourism",
+            client: "Wilder Kaiser tourism region, Tirol",
+            items: [
+                { big: "~40,000", label: "words: their magazine, German to English" },
+                { big: "Website", label: "translated into English in full" }
+            ],
+            testimonialsTitle: "What clients say"
+        },
         how: {
             eyebrow: "How it works",
             title: "From your German text to finished English in three steps",
@@ -246,6 +257,17 @@ export const translations = {
             whatsapp: "WhatsApp",
             location: "Standort",
             business: "Geschäftszeiten: Montag bis Freitag, 9:00 bis 18:00 Uhr (MEZ)"
+        },
+        work: {
+            eyebrow: "Ausgewählte Projekte",
+            title: "Aktuelles Projekt",
+            tag: "Tourismus",
+            client: "Ferienregion Wilder Kaiser, Tirol",
+            items: [
+                { big: "~40.000", label: "Wörter: das Magazin der Region, Deutsch → Englisch" },
+                { big: "Website", label: "komplett ins Englische übersetzt" }
+            ],
+            testimonialsTitle: "Das sagen Kunden"
         },
         how: {
             eyebrow: "So funktioniert's",
