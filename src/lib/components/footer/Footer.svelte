@@ -20,6 +20,8 @@
 		</div>
 		<ul class="grid gap-2">
 			<li><a class="text-white hover:text-theme-accent-on-dark" href="mailto:info@jackchamberlaintranslation.com">info@jackchamberlaintranslation.com</a></li>
+			<li><a class="text-white hover:text-theme-accent-on-dark" href="/impressum">{translations[$language].footer.imprint}</a></li>
+			<li><a class="text-white hover:text-theme-accent-on-dark" href="/datenschutz">{translations[$language].footer.privacy}</a></li>
 			<li><a class="text-white hover:text-theme-accent-on-dark" href="/policy">{translations[$language].footer.terms}</a></li>
 			<li>© {year} Jack Chamberlain</li>
 		</ul>

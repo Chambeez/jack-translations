@@ -181,6 +181,8 @@ export const translations = {
         },
         footer: {
             terms: "Terms & Conditions",
+            imprint: "Legal notice",
+            privacy: "Privacy policy",
             tagline: "German to English translation"
         } 
     },
@@ -366,6 +368,8 @@ export const translations = {
         },
         footer: {
             terms: "Allgemeine Geschäftsbedingungen",
+            imprint: "Impressum",
+            privacy: "Datenschutz",
             tagline: "Übersetzungen Deutsch–Englisch"
         } 
     }

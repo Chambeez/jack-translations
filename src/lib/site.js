@@ -18,4 +18,14 @@ export const WHATSAPP_DISPLAY = '+43 677 6343 52 16';
 export const FORM_ENDPOINT = '';
 
 // Pages listed in sitemap.xml
-export const PAGES = ['/', '/policy'];
+export const PAGES = ['/', '/policy', '/impressum', '/datenschutz'];
+
+// Impressum details (from Jack, 5 Oct 2026). Not legal advice.
+export const LEGAL = {
+	name: 'Jack Edward Chamberlain',
+	street: 'Hauning 21a',
+	town: '6306 Söll',
+	country: { de: 'Österreich', en: 'Austria' },
+	taxNumber: '83 187/5893',
+	authority: 'Bezirkshauptmannschaft Kufstein'
+};
