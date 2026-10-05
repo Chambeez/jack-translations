@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://chamberlainuebersetzung.com/sitemap.xml

@@ -16,3 +16,6 @@ export const WHATSAPP_DISPLAY = '+43 677 6343 52 16';
 // Formspree form URL, e.g. 'https://formspree.io/f/abcdwxyz'. While empty, the
 // quote form opens the visitor's email app with everything filled in instead.
 export const FORM_ENDPOINT = '';
+
+// Pages listed in sitemap.xml
+export const PAGES = ['/', '/policy'];

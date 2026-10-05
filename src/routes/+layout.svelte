@@ -4,6 +4,7 @@
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import WhatsAppButton from '$lib/components/ui/WhatsAppButton.svelte';
 	import { language } from '$lib/stores/language';
+	import { jsonLd } from '$lib/jsonld';
 
 	export let data;
 
@@ -12,6 +13,10 @@
 	// changes it afterwards in the browser.
 	language.set(data.lang);
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd(data.lang)).replace(/</g, '\\u003c')}</script>`}
+</svelte:head>
 
 <div class="flex min-h-screen flex-col">
 	<Nav />

@@ -15,7 +15,7 @@ export const handle = async ({ event, resolve }) => {
     return await resolve(event, {
         transformPageChunk: ({ html }) => {
             return html
-                .replace('%lang%', lang)
+                .replaceAll('%lang%', lang)
                 .replace('%meta.title%', currentTranslations.metadata.title)
                 .replace('%meta.description%', currentTranslations.metadata.description)
                 .replace('%meta.ogTitle%', currentTranslations.metadata.ogTitle)
