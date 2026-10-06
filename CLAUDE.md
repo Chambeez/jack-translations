@@ -18,7 +18,7 @@ Jack is not a trained developer: explain every step in plain language, do the te
 ## Deploy
 - GitHub: Chambeez/jack-translations, branch `master`. Push = live (Cloudflare Pages project "jack-translations", build `npm run build`, output `.svelte-kit/cloudflare`).
 - Jack pushes from VS Code (Sync button). Commit with Jack as author.
-- If a push doesn't go live within a few minutes: Cloudflare showed a "disconnected from Git" warning on 5 Oct 2026; reconnect in Pages → Settings → Build → Git repository.
+- If a push doesn't go live within a few minutes: check the Cloudflare GitHub app has access to this repo (github.com/settings/installations, "Cloudflare Workers and Pages", Repository access). It was missing until 6 Oct 2026 (repo came from Tom), which showed as "disconnected from your Git account" in Pages. Cloudflare only builds on a new push after reconnecting.
 
 ## Accounts (Jack does all logins and passwords)
 - Domains: Porkbun (account jackchamberlain), auto-renew on, expire Jan 2027. Nameservers: Cloudflare (chloe/rene.ns.cloudflare.com).
