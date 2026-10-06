@@ -26,7 +26,7 @@ Jack is not a trained developer: explain every step in plain language, do the te
 - No email on these domains.
 
 ## History
-- Built by Tom (Decisive Development), handed over 5 Oct 2026 (repo, domains). Moved from Netlify to Cloudflare the same day. Tom deletes the Netlify site once Jack confirms.
+- Built by Tom (Decisive Development), handed over 5 Oct 2026 (repo, domains). Moved from Netlify to Cloudflare the same day. Tom deletes the Netlify site once Jack confirms: not before ~9 Oct 2026, because on 6 Oct some resolvers (incl. Jack's home Wi-Fi) still cached the old Netlify nameservers for chamberlaintranslation.com and showed the old site.
 
 ## Open
 - Cloudflare: remove the redirect rule on chamberlaintranslation.com, add chamberlaintranslation.com + www as custom domains on the Pages project (needs Jack's OK). Turn on Web Analytics. Check "Managed robots.txt".
